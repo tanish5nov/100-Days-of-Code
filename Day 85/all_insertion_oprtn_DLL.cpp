@@ -111,6 +111,7 @@ void print(node* head){
 }
 
 int main() {
+  cout<<"1 Based Indexing "<<endl;
   node* head = new node(10);
   node* second = new node(20);
   node* third = new node(30);
@@ -125,13 +126,16 @@ int main() {
 
   third->next = fourth;
   fourth->prev = third;
-
+  int pos;
+  cout<<"Specify Position: ";
+  cin>>pos;
+  cout<<endl;
   print(head);
   insertAtHead(head, tail, 90);
   print(head);
   insertAtEnd(head, tail, 100);
   print(head);
-  insertAtPos(head, tail, 200,9);
+  insertAtPos(head, tail, 200,pos);
   print(head);
   return 0;
 }
